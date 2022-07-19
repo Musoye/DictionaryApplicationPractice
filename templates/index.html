@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Dictionary App</title>
+</head>
+    <body class="dict">
+        <header>
+            <h1>The Dictionary App</h1>
+        </header>
+        <main>
+            <form  action="#" method="post">
+                <label for="word" style="color: white ;" >Word:</label> 
+                <br>
+                <br>
+                <input type="text" class="form-control" name="word" id="word" placeholder="Type in word here" placeholder="write your word here">
+                <br>
+                <br>
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Submit</button>
+            </form>
+            <div >
+                <form action=""> 
+                <div>
+                    <label for="word" style="color: white ;"  >Meaning:</label>
+                    <br>
+                    <br>
+                    {% for word in user_response %}
+                    <tr>
+                        <td class="area" id="word" style="font-size: 30px ;" > {{ word }}</td>
+                    </tr>
+                    {% endfor %}
+                </div>
+                </form>
+            </div>
+            
+        </main>
+
+        <footer>
+            <p>Created,Crafted by <em>OYEBAMIJI MUSTAPHA OYETUNDE</em> </p>
+        </footer>
+        
+    </body>
+</html>
