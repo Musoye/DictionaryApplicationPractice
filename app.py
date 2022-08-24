@@ -3,7 +3,7 @@ from scope import Dictionary
 
 app = Flask(__name__)
 
-app.secret_key = ''
+app.secret_key = 'secretkey&&'
 
 
 @app.route('/', methods=['GET', 'POST'])
