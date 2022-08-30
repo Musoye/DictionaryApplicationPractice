@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from scope import Dictionary
+from dict import meaning
 
 app = Flask(__name__)
 
@@ -14,8 +14,7 @@ def index():
         if user_input == '':
             user_response = "Enter a word into the input box."
         else:
-            conn = Dictionary(user_input)
-            user_response = conn.meaning()
+            user_response=meaning(user_input)
    
     return render_template("index.html", user_response=user_response)
     
